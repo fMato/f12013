@@ -1,0 +1,10 @@
+<pantalla>
+    <titulo>Mi apuesta</titulo>
+    <java>com.f1.manejadoras.MiApuesta</java>
+    <jsp>mi_apuesta.jsp</jsp>
+    <conexion>S</conexion>
+    <perfiles>
+        <perfil>U</perfil>
+        <perfil>A</perfil>
+    </perfiles>
+</pantalla>
