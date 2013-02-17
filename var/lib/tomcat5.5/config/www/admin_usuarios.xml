@@ -1,0 +1,9 @@
+<pantalla>
+    <titulo>Administración de usuarios</titulo>
+    <java>com.f1.manejadoras.AdminUsuarios</java>
+    <jsp>admin_usuarios.jsp</jsp>
+    <conexion>S</conexion>
+    <perfiles>
+        <perfil>A</perfil>
+    </perfiles>
+</pantalla>
