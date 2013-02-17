@@ -1,0 +1,10 @@
+<pantalla>
+    <titulo>Clasificacion general</titulo>
+    <java>com.f1.manejadoras.ClasificacionGeneral</java>
+    <jsp>clasificacion_general.jsp</jsp>
+    <conexion>S</conexion>
+    <perfiles>
+        <perfil>U</perfil>
+        <perfil>A</perfil>
+    </perfiles>
+</pantalla>
