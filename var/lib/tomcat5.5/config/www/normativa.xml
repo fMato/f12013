@@ -1,0 +1,9 @@
+<pantalla>
+    <titulo>Normativa</titulo>
+    <java></java>
+    <jsp>normativa.jsp</jsp>
+    <conexion>N</conexion>
+    <perfiles>
+        <perfil></perfil>
+    </perfiles>
+</pantalla>
