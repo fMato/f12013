@@ -1,0 +1,10 @@
+<pantalla>
+    <titulo>Apuesta anterior</titulo>
+    <java>com.f1.manejadoras.ApuestaAnterior</java>
+    <jsp>apuesta_anterior.jsp</jsp>
+    <conexion>S</conexion>
+    <perfiles>
+        <perfil>U</perfil>
+        <perfil>A</perfil>
+    </perfiles>
+</pantalla>
