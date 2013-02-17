@@ -1,0 +1,9 @@
+<pantalla>
+    <titulo>Alta de Usuario</titulo>
+    <java></java>
+    <jsp>registro.jsp</jsp>
+    <conexion>N</conexion>
+    <perfiles>
+        <perfil></perfil>
+    </perfiles>
+</pantalla>
