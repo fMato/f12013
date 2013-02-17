@@ -1,0 +1,9 @@
+<pantalla>
+    <titulo>Registro de Usuario</titulo>
+    <java></java>
+    <jsp>login.jsp</jsp>
+    <conexion>N</conexion>
+    <perfiles>
+        <perfil></perfil>
+    </perfiles>
+</pantalla>
