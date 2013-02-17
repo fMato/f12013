@@ -1,0 +1,9 @@
+<pantalla>
+    <titulo>Informar resultado</titulo>
+    <java>com.f1.manejadoras.InformarResultado</java>
+    <jsp>informar_resultado.jsp</jsp>
+    <conexion>S</conexion>
+    <perfiles>
+        <perfil>A</perfil>
+    </perfiles>
+</pantalla>
