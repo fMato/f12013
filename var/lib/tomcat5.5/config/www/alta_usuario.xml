@@ -1,0 +1,9 @@
+<pantalla>
+    <titulo>Confirmación</titulo>
+    <java>com.f1.manejadoras.AltaUsuario</java>
+    <jsp>alta_usuario.jsp</jsp>
+    <conexion>N</conexion>
+    <perfiles>
+        <perfil></perfil>
+    </perfiles>
+</pantalla>
