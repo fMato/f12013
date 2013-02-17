@@ -1,0 +1,39 @@
+@charset "utf-8";
+/* CSS Document */
+/* Autor: fMato */
+
+*{font-family:Arial;font-size:12px;}
+h3{font-family:Arial;font-size:15px;color:#f00;}
+h4{font-family:Arial;font-size:13px;color:#000;text-decoration:underline;}
+p{font-family:Arial;font-size:12px;}
+ol{font-family:Arial;font-size:12px;}
+.nav {font-family:Arial;padding:2px;border:solid 1px #000;}
+.nav div {font-family:Arial;padding: 0 0 0 0;}
+.nav div a, .nav div a:visited {padding: 5px 5px 5px 5px;display: block;width: 150px;text-decoration: none;color:#000;}
+.nav div a:hover, .nav div a:active, .nav div a:focus {color: #F00;font-weight:bold;font-size:12px;}
+.nav div a {color: #000;font-weight:bold;font-size:12px;}
+.labelFormRegistro{font-weight:bold;float:left;width:130px;}
+.labelFormLogin{font-weight:bold;float:left;width:100px;}
+.labelMiApuesta{font-weight:bold;float:left;width:120px;}
+.labelMiCuenta{font-weight:bold;float:left;width:60px;}
+.labelMiCuenta2{font-weight:bold;float:left;width:120px;}
+.labelMiApuestaDatos{font-weight:bold;float:left;width:155px;}
+.selectMiApuesta{font-family:Arial;font-size:12px;}
+.linkStandar:link{font-family:Arial;font-size:12px;font-weight:bold;color:#000;}
+.linkStandar:visited{font-family:Arial;font-size:12px;font-weight:bold;color:#000;}
+.linkStandar:hover{font-family:Arial;font-size:12px;font-weight:bold;color:#f00;text-decoration:none;}
+.linkStandar:active{font-family:Arial;font-size:12px;font-weight:bold;color:#f00;text-decoration:none;}
+.linkStandar:focus{font-family:Arial;font-size:12px;font-weight:bold;color:#f00;text-decoration:none;}
+.td_pie{border-top:solid 1px #ccc;font-family:Arial;font-size:11px;color:#999;text-align:center;}
+.td_pie a{color:#000;font-weight:bold;}
+.td_pie a:hover{color:#000;font-weight:bold;text-decoration:none;}
+.td_menu{padding: 0 0 0 0;}
+.filaUsuario{background-color:#ff9900;}
+.celdaMaximo{background-color:#00bb00;}
+.bloqueError{border:solid 1px #000;padding:5px;background-color:#ddd;font-family:Arial;font-size:12px;font-weight:bold;text-align:center;}
+.tablaClasif{border:solid 1px #000;border-bottom:solid 0px #000;border-right:solid 0px #000;}
+.tablaClasif th{border-bottom:solid 1px #000;border-right:solid 1px #000;background-color:#ccc;font-size:11px;}
+.tablaClasif td{border-bottom:solid 1px #000;border-right:solid 1px #000;text-align:center;font-size:12px;}
+.tablaApuestaAnterior{border:solid 1px #000;border-bottom:solid 0px #000;border-right:solid 0px #000;}
+.tablaApuestaAnterior th{border-bottom:solid 1px #000;border-right:solid 1px #000;background-color:#ccc;font-size:11px;padding:5px;}
+.tablaApuestaAnterior td{border-bottom:solid 1px #000;border-right:solid 1px #000;text-align:center;font-size:12px;padding:5px;}
