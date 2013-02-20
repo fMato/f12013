@@ -2,6 +2,9 @@
 <%@page import="java.util.ArrayList"%>
 <h3>Adminsitración de usuarios.</h3>
 <script type="text/javascript">
+    function pulsaEnter(){
+
+        }
     function administrar(accion,usuario,nombre){
         var mensaje="";
 
@@ -29,17 +32,18 @@
         }
 </script>
 
-<FORM name="frmAdministrar" method="POST" action="./admin_usuarios.html">
+<FORM name="frmAdministrar" method="POST" action="./admin_usuarios.html" accept-charset="iso-8859-1">
     <input type="hidden" name="accion" value=""/>
     <input type="hidden" name="usuario" value=""/>
 </FORM>
 
-<h4>Usuarios pendientes de activación</h4>
-
 <%
 ArrayList listaUsuariosDesactivados=(ArrayList)request.getAttribute("listaUsuariosDesactivados");
 if(listaUsuariosDesactivados==null)listaUsuariosDesactivados=new ArrayList();
+%>
+<h4>Usuarios pendientes de activación (<%=listaUsuariosDesactivados.size()%>)</h4>
 
+<%
 for(int i=0; i<listaUsuariosDesactivados.size(); i++){
     HashMap usuario=(HashMap)listaUsuariosDesactivados.get(i);
     if(usuario==null)usuario=new HashMap();
@@ -57,13 +61,13 @@ if(listaUsuariosDesactivados.size()==0){%>
     <%}
     %>
 
-
-<h4>Administradores</h4>
-
 <%
 ArrayList listaUsuariosAdmin=(ArrayList)request.getAttribute("listaUsuariosAdmin");
 if(listaUsuariosAdmin==null)listaUsuariosAdmin=new ArrayList();
+%>
+<h4>Administradores (<%=listaUsuariosAdmin.size()%>)</h4>
 
+<%
 for(int i=0; i<listaUsuariosAdmin.size(); i++){
     HashMap usuario=(HashMap)listaUsuariosAdmin.get(i);
     if(usuario==null)usuario=new HashMap();
@@ -86,12 +90,14 @@ for(int i=0; i<listaUsuariosAdmin.size(); i++){
     <%}
 %>
 
-<h4>Usuarios activos</h4>
-
 <%
 ArrayList listaUsuariosActivos=(ArrayList)request.getAttribute("listaUsuariosActivos");
 if(listaUsuariosActivos==null)listaUsuariosActivos=new ArrayList();
+%>
 
+<h4>Usuarios activos (<%=listaUsuariosActivos.size()%>)</h4>
+
+<%
 for(int i=0; i<listaUsuariosActivos.size(); i++){
     HashMap usuario=(HashMap)listaUsuariosActivos.get(i);
     if(usuario==null)usuario=new HashMap();

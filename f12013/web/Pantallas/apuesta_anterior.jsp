@@ -1,5 +1,10 @@
 <%@page import="java.util.HashMap"%>
 <h3>Apuesta anterior.</h3>
+<script type="text/javascript">
+    function pulsaEnter(){
+
+        }
+</script>
 <%
 String nombre_usuario=(String)request.getAttribute("nombre_usuario");
 if(nombre_usuario==null)nombre_usuario="";

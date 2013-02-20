@@ -59,16 +59,20 @@
             document.frmRegistro.submit();
             }
         }
+
+    function pulsaEnter(){
+            doSubmitRegistro();
+        }
 </script>
 <h3>Alta de usuraio</h3>
 <p>
     Todos los campos son obligatorios.<BR />
     La cuenta será activada manualmente una vez verificada por los administradores de la página.
 </p>
-<FORM name="frmRegistro" method="POST" action="./alta_usuario.html">
+<FORM name="frmRegistro" method="POST" action="./alta_usuario.html" accept-charset="iso-8859-1">
     <p>
         <span class="labelFormRegistro">Nombre y apellidos:</span> <input type="text" class="campoForm" name="nombre_apell" size="75" maxlength="75" value=""/>
-        <BR /><span class="labelFormRegistro">Nick:</span> <input type="text" class="campoForm" name="ident_usu" size="15" maxlength="15" value=""/>
+        <BR /><span class="labelFormRegistro">Usuario:</span> <input type="text" class="campoForm" name="ident_usu" size="15" maxlength="15" value=""/> <i>(con este usuario accederás a la web)</i>
         <BR /><span class="labelFormRegistro">Email:</span> <input type="text" class="campoForm" name="email" size="75" maxlength="75" value=""/>
         <BR /><span class="labelFormRegistro">Contraseña:</span> <input type="password" class="campoForm" name="pass" size="30" maxlength="30" value=""/><input type="hidden" name="pass_encr" size="40" maxlength="40" value=""/>
         <BR /><span class="labelFormRegistro">Repite la contraseña:</span> <input type="password" class="campoForm" name="repass" size="30" maxlength="30" value=""/>

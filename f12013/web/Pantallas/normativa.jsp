@@ -1,3 +1,8 @@
+<script type="text/javascript">
+    function pulsaEnter(){
+
+        }
+</script>
 <h3>Normativa.</h3>
 <p>
     Participar en el juego conlleva aceptar TODAS las normas aquí descritas:

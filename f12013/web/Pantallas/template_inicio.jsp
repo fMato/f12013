@@ -1,12 +1,12 @@
-<!--
-    Document   : template_inicio
-    Created on : 02-mar-2011, 18:06:55
-    Author     : fMato
--->
-
+<%-- 
+    Document   : template_inicio2
+    Created on : 19-feb-2013, 20:09:03
+    Author     : Mato
+--%>
 <%@page import="java.util.HashMap"%>
 <%@page import="java.util.ArrayList"%>
-<%@page contentType="text/html" pageEncoding="ISO-8859-1"%>
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+
 <%
 response.setDateHeader("Expires",-1);
 response.setHeader("Pragma","no-cache");
@@ -17,11 +17,12 @@ String titulo = (String) request.getAttribute("tituloPantalla");
 String pantallaContenido = (String) request.getAttribute("jspPresentacion");
 
 %>
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+   "http://www.w3.org/TR/html4/loose.dtd">
 
 <html>
     <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title><%=titulo%></title>
         <link rel="stylesheet" type="text/css" href="./css/general.css" />
         <script type="text/javascript" src="./javascript/comues.js"></script>
@@ -52,7 +53,7 @@ String pantallaContenido = (String) request.getAttribute("jspPresentacion");
             </tr>
             <tr>
                 <td class="td_pie" colspan="2">
-                    Para cualquier problema ponte en contacto con los <A href="mailto:f1Sopra@gmail.com">administradores</A> de la página.
+                    Para cualquier problema ponte en contacto con los <A href="mailto:f1Sopra@gmail.com">administradores</A> de la pÃ¡gina.
                 </td>
             </tr>
         </table>

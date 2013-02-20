@@ -1,7 +1,9 @@
 <%@page import="java.util.HashMap"%>
 <%@page import="java.util.ArrayList"%>
 <h3>Todas las apuestas.</h3>
-
+<script type="text/javascript">
+    function pulsaEnter(){}
+</script>
 <table class="tablaClasif" width="99%" cellspacing="0">
     <tr>
         <th>
@@ -73,8 +75,10 @@
                 if(hay_datos_carrera==null || "".equals(hay_datos_carrera))hay_datos_carrera="N";
             %>
                 <td>
-                    <%if("S".equals(hay_datos_carrera)){%>
-                        <A href="./apuesta_anterior.html?carrera=<%=ident_carrera%>&jugador=<%=usuario%>" class="linkStandar" title="Apuesta de <%=nombre_usuario%> para el <%=nombre_carrera%>.">
+                    <%if("S".equals(hay_datos_carrera)){
+                        long antiCache=System.currentTimeMillis();
+                        %>
+                        <A href="./apuesta_anterior.html?carrera=<%=ident_carrera%>&jugador=<%=usuario%>&<%=antiCache%>" class="linkStandar" title="Apuesta de <%=nombre_usuario%> para el <%=nombre_carrera%>.">
                             <img border="0" src="./Imagenes/otras/lupa2.png" alt="Apuesta de <%=nombre_usuario%> para el <%=nombre_carrera%>." title="Apuesta de <%=nombre_usuario%> para el <%=nombre_carrera%>."/>
                         </A>
                     <%}else{%>
