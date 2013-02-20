@@ -851,9 +851,10 @@ public class AccesosBBDD {
         System.out.println("Llamada a BBDD: getApuestasAnterioresSQL()");
 
         Connection conexion = BaseDeDatos.establecerConexion();
-        String query="SELECT a.ident_usuario, b.nombre_usuario, a.ident_carrera "
-                + "FROM apuestas a, usuarios b "
-                + "WHERE a.ident_usuario=b.ident_usuario "
+        String query="SELECT b.ident_usuario, b.nombre_usuario, a.ident_carrera "
+                + "FROM apuestas a right join usuarios b "
+                + "ON a.ident_usuario=b.ident_usuario "
+                + "WHERE b.activado='S'"
                 + "ORDER BY b.nombre_usuario, a.ident_carrera";
 
         Statement s = conexion.createStatement();
@@ -959,7 +960,7 @@ public class AccesosBBDD {
 
         if(rs!=null){
                 while(rs.next()){
-                    ultimaCarreraDisputada=rs.getString("identificador");
+                    ultimaCarreraDisputada=rs.getString("ident_carrera");
                     if(ultimaCarreraDisputada==null)ultimaCarreraDisputada="";
                 }
         }
@@ -974,10 +975,10 @@ public class AccesosBBDD {
 
         Connection conexion = BaseDeDatos.establecerConexion();
 
-        String query="INSERT INTO resultado_real_carreras (identificador,pole,primero,segundo,tercero,cuarto,quinto,sexto,septimo,octavo,noveno,decimo) "
+        String query="INSERT INTO resultados_carreras (ident_carrera,pole,primero,segundo,tercero,cuarto,quinto,sexto,septimo,octavo,noveno,decimo) "
                 + "VALUES (?,?,?,?,?,?,?,?,?,?,?,?) "
                 + "ON DUPLICATE KEY "
-                + "UPDATE identificador=?, pole=?, primero=?, segundo=?, tercero=?, cuarto=?, quinto=?, sexto=?, septimo=?, octavo=?, noveno=?, decimo=?";
+                + "UPDATE ident_carrera=?, pole=?, primero=?, segundo=?, tercero=?, cuarto=?, quinto=?, sexto=?, septimo=?, octavo=?, noveno=?, decimo=?";
 
         PreparedStatement selectStatement = conexion.prepareStatement(query);
 
@@ -1042,11 +1043,12 @@ public class AccesosBBDD {
         System.out.println("Llamada a BBDD: getClasificacionGeneralSQL()");
 
         Connection conexion = BaseDeDatos.establecerConexion();
-        String query="SELECT resultados_apuestas.ident_usuario as iu, usuarios.nombre_usuario as nu, sum(resultados_apuestas.puntos) as pt "
-                + "FROM resultados_apuestas, usuarios "
-                + "WHERE usuarios.ident_usuario=resultados_apuestas.ident_usuario "
+        String query="SELECT usuarios.ident_usuario as iu, usuarios.nombre_usuario as nu, sum(resultados_apuestas.puntos) as pt "
+                + "FROM usuarios LEFT JOIN resultados_apuestas "
+                + "ON usuarios.ident_usuario=resultados_apuestas.ident_usuario "
+                + "WHERE usuarios.activado='S'"
                 + "GROUP by iu "
-                + "ORDER by pt DESC";
+                + "ORDER by pt DESC, nu ASC";
 
         Statement s = conexion.createStatement();
         ResultSet rs = s.executeQuery (query);
