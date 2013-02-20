@@ -1,4 +1,9 @@
 <h3>Confirmación de alta de usuario.</h3>
+<script type="text/javascript">
+    function pulsaEnter(){
+
+        }
+</script>
 <p>
     <%
     String nombre_usuario=(String)request.getAttribute("nombre_usuario");

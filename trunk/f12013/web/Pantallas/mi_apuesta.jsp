@@ -8,6 +8,9 @@
         else
             alert(mensaje);
     }
+    function pulsaEnter(){
+            lanzarAltaApuesta();
+        }
     function validarApuesta(){
         mensaje="";
         var validacionApuestas=new Array(10);
@@ -47,7 +50,7 @@
 
 <h3>Mi apuesta.</h3>
 
-<FORM name="frmDatosProxApuesta" method="POST" action="./mi_apuesta.html">
+<FORM name="frmDatosProxApuesta" method="POST" action="./mi_apuesta.html" accept-charset="iso-8859-1">
     <input type="hidden" name="accion" value="guardar"/>
     <div style="padding:5px;width:90%;">
         <span class="labelMiApuesta">Pole:</span>

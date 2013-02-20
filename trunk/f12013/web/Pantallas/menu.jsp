@@ -14,6 +14,8 @@
         HashMap menuItem=(HashMap)opcionesMenu.get(i);
         if(menuItem==null)menuItem=new HashMap();
 
+        long antiCache=System.currentTimeMillis();
+
         String requiere_conexion=(String)menuItem.get("requiere_conexion");
         if(requiere_conexion==null)requiere_conexion="";
         String texto=(String)menuItem.get("texto");
@@ -28,10 +30,10 @@
             cumplePerfil=true;
 
         if("N".equals(requiere_conexion)){%>
-            <div><A href="<%=url%>"><%=texto%></A></div>
+            <div><A href="<%=url%>?<%=antiCache%>"><%=texto%></A></div>
             <%}
         else if(hay_conexion && cumplePerfil){%>
-            <div><A href="<%=url%>"><%=texto%></A></div>
+            <div><A href="<%=url%>?<%=antiCache%>"><%=texto%></A></div>
             <%}
         }
 

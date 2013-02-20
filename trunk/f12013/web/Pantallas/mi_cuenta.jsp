@@ -8,6 +8,10 @@ if(datosUsuario==null)datosUsuario=new HashMap();
     var ncrpt = "<%=(String)datosUsuario.get("pass_usuario")%>";
     var mail = "<%=(String)datosUsuario.get("correo_usuario")%>";
 
+    function pulsaEnter(){
+            modificarDatos();
+        }
+
     function cambiarPass(){
         document.getElementById("bloque2").style.display="none";
         document.getElementById("bloque3").style.display="";
@@ -64,7 +68,7 @@ if(datosUsuario==null)datosUsuario=new HashMap();
     }
 }
 </script>
-<form name="frmDatos" method="post" action="./mi_cuenta.html">
+<form name="frmDatos" method="post" action="./mi_cuenta.html" accept-charset="iso-8859-1">
     <input type="hidden" name="accion" value="guardar"/>
     <input type="hidden" name="correo" value=""/>
     <input type="hidden" name="pass" value=""/>

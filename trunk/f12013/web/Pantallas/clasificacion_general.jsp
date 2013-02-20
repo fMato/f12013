@@ -1,7 +1,11 @@
 <%@page import="java.util.HashMap"%>
 <%@page import="java.util.ArrayList"%>
 <h3>Clasificación general.</h3>
-
+<script type="text/javascript">
+    function pulsaEnter(){
+           
+        }
+</script>
 <table class="tablaClasif" width="99%" cellspacing="0">
     <tr>
         <th>
@@ -28,14 +32,18 @@
                 if(nombre_carrera==null)nombre_carrera="";
                 String ind_bandera=(String)carrera.get("ind_bandera");
                 if(ind_bandera==null)ind_bandera="";
+                long antiCache=System.currentTimeMillis();
                 %>
-                <A href="./clasificacion_general.html?ordenar=<%=ident_carrera%>" class="linkStandar" title="Ordenar por <%=nombre_carrera%>.">
+                <A href="./clasificacion_general.html?ordenar=<%=ident_carrera%>&<%=antiCache%>" class="linkStandar" title="Ordenar por <%=nombre_carrera%>.">
                     <img border="0" src="./Imagenes/banderas/<%=ind_bandera%>.png" alt="Ordenar por <%=nombre_carrera%>." title="Ordenar por <%=nombre_carrera%>."/>
                 </A>
             </th>
         <%}%>
         <th>
-            <A href="./clasificacion_general.html" class="linkStandar" title="Ordenar por puntos totales.">Total</A>
+            <%
+            long antiCache=System.currentTimeMillis();
+            %>
+            <A href="./clasificacion_general.html?<%=antiCache%>" class="linkStandar" title="Ordenar por puntos totales.">Total</A>
         </th>
     </tr>
     <%
