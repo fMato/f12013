@@ -44,6 +44,9 @@ public class ClasificacionGeneral implements PantallaWeb {
                 if(listaUsuarios.size()>0)
                     datosClasificacion.put("listaUsuarios", listaUsuarios);
                 }
+
+            
+
             
             request.setAttribute("datosClasificacion", datosClasificacion);
 
